@@ -4,7 +4,7 @@ import NoteList from "./note/NoteList";
 import ViewNote from "./note/ViewNote";
 
 function Main() {
-	const existingNotes = JSON.parse(localStorage.getItem("sticky-notes"));
+	let existingNotes = JSON.parse(localStorage.getItem("sticky-notes"));
 	if (!existingNotes) existingNotes = [];
 	const [notes, setNotes] = useState(existingNotes),
 		[currentNote, setCurrentNote] = useState();
